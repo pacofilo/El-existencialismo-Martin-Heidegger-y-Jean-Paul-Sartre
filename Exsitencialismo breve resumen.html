@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Existencialismo — Historia de la Filosofía · Heidegger & Sartre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #FAF9F5;
+            --bg-secondary: #F0EDE6;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B28;
+            --text-secondary: #6B6560;
+            --text-tertiary: #9B9590;
+            --accent: #D97757;
+            --accent-hover: #C4603F;
+            --accent-light: rgba(217, 119, 87, 0.08);
+            --blue-accent: #3B82B6;
+            --gold-accent: #B8860B;
+            --gold-light: rgba(184, 134, 11, 0.06);
+            --border: rgba(0, 0, 0, 0.06);
+            --border-hover: rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 2px 8px rgba(0,0,0,0.06);
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.75;
+            font-size: 18px;
+        }
+
+        .topbar {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(250, 249, 245, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .topbar-logo { font-family: 'Instrument Serif', serif; font-size: 20px; color: var(--accent); }
+        
+        .hero { max-width: 1000px; margin: 0 auto; padding: 60px 24px; text-align: center; }
+        .hero-overline { 
+            display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; 
+            letter-spacing: 2px; color: var(--accent); margin-bottom: 16px; padding: 6px 14px; 
+            background: var(--accent-light); border-radius: 20px; 
+        }
+        .hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(32px, 6vw, 56px); line-height: 1.1; margin-bottom: 20px; }
+        .hero h1 em { font-style: italic; color: var(--accent); }
+
+        .intro-quote {
+            max-width: 850px; margin: 0 auto 60px; padding: 32px;
+            background: var(--gold-light); border-left: 4px solid var(--gold-accent);
+            font-family: 'Instrument Serif', serif; font-size: 24px; font-style: italic;
+        }
+
+        .cards-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px; max-width: 1100px; margin: 0 auto 80px; padding: 0 24px;
+        }
+        .card-btn {
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 28px; cursor: pointer; text-align: left; transition: all 0.3s ease;
+        }
+        .card-btn:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--accent); }
+        .card-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+        .card-title { font-family: 'Instrument Serif', serif; font-size: 22px; margin-bottom: 8px; }
+        .card-desc { font-size: 15px; color: var(--text-secondary); }
+
+        /* Modales */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(45, 43, 40, 0.4); backdrop-filter: blur(4px);
+            display: none; align-items: center; justify-content: center; z-index: 1000;
+        }
+        .modal {
+            background: var(--bg-primary); width: 90%; max-width: 700px; max-height: 85vh;
+            border-radius: var(--radius); overflow-y: auto; padding: 40px; position: relative;
+        }
+        .close-modal { position: absolute; top: 20px; right: 20px; cursor: pointer; border: none; background: none; font-size: 24px; }
+        .modal h2 { font-family: 'Instrument Serif', serif; font-size: 32px; margin-bottom: 20px; color: var(--accent); }
+        .modal p { margin-bottom: 16px; color: var(--text-secondary); }
+        .modal ul { margin-left: 20px; margin-bottom: 16px; }
+
+        @media (max-width: 600px) { .modal { padding: 24px; } }
+    </style>
+</head>
+<body>
+
+    <nav class="topbar">
+        <div class="topbar-logo">Existencialismo 2026</div>
+        <div class="topbar-section">Hª de la Filosofía</div>
+    </nav>
+
+    <header class="hero">
+        <span class="hero-overline">El sentido de la nada</span>
+        <h1>La existencia <em>precede</em> a la esencia</h1>
+        <p class="hero-subtitle">Un recorrido por el pensamiento de Jean-Paul Sartre y Martin Heidegger ante un mundo absurdo.</p>
+    </header>
+
+    <blockquote class="intro-quote">
+        "El hombre está condenado a ser libre. Condenado porque no se ha creado a sí mismo, y sin embargo libre, porque una vez arrojado al mundo es responsable de todo lo que hace."
+        <cite>— Jean-Paul Sartre [cite: 90]</cite>
+    </blockquote>
+
+    <main class="cards-grid">
+        <button class="card-btn" onclick="openModal('modal-contexto')">
+            <span class="card-icon">🌍</span>
+            <h3 class="card-title">Contexto Histórico</h3>
+            <p class="card-desc">Europa post-Segunda Guerra Mundial y la ocupación nazi en Francia.</p>
+        </button>
+
+        <button class="card-btn" onclick="openModal('modal-sartre')">
+            <span class="card-icon">🖋️</span>
+            <h3 class="card-title">Jean-Paul Sartre</h3>
+            <p class="card-desc">El ateísmo existencialista, la libertad absoluta y la "mala fe".</p>
+        </button>
+
+        <button class="card-btn" onclick="openModal('modal-heidegger')">
+            <span class="card-icon">⏳</span>
+            <h3 class="card-title">Martin Heidegger</h3>
+            <p class="card-desc">El Dasein, el ser arrojado y la temporalidad de la existencia.</p>
+        </button>
+
+        <button class="card-btn" onclick="openModal('modal-ontologia')">
+            <span class="card-icon">🕳️</span>
+            <h3 class="card-title">En-sí vs Para-sí</h3>
+            <p class="card-desc">La distinción entre las cosas inertes y la conciencia humana.</p>
+        </button>
+
+        <button class="card-btn" onclick="openModal('modal-ortega')">
+            <span class="card-icon">🇪🇸</span>
+            <h3 class="card-title">Ortega y Gasset</h3>
+            <p class="card-desc">La circunstancia española frente al proyecto vital existencialista.</p>
+        </button>
+
+        <button class="card-btn" onclick="openModal('modal-actualidad')">
+            <span class="card-icon">📱</span>
+            <h3 class="card-title">Existencialismo Hoy</h3>
+            <p class="card-desc">Conexiones con Byung-Chul Han y la "atomización" social.</p>
+        </button>
+    </main>
+
+    <div id="modal-contexto" class="modal-overlay">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('modal-contexto')">&times;</button>
+            <h2>El grito de la libertad</h2>
+            <p>El existencialismo surge con fuerza tras la Segunda Guerra Mundial (años 40-50)[cite: 194]. En una Europa devastada, filósofos como Sartre y Simone de Beauvoir cuestionaron el sentido de la vida en un mundo que parecía absurdo y sin guías divinas[cite: 195].</p>
+            <p>La ocupación nazi de Francia (1940-1944) obligó a cada individuo a elegir: colaborar, resistir o callar[cite: 197]. Esta situación extrema demostró que, incluso bajo amenaza, la elección final es siempre del individuo[cite: 201].</p>
+        </div>
+    </div>
+
+    <div id="modal-sartre" class="modal-overlay">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('modal-sartre')">&times;</button>
+            <h2>Jean-Paul Sartre</h2>
+            <p><strong>La existencia precede a la esencia:</strong> No nacemos con un propósito fijo; nos creamos a través de nuestras decisiones[cite: 203, 204].</p>
+            <ul>
+                <li><strong>Condenados a la libertad:</strong> No hay valores eternos; somos totalmente responsables de nuestra vida[cite: 199, 200].</li>
+                <li><strong>Mala fe (Mauvaise foi):</strong> El autoengaño de fingir que no somos libres o que "somos así por naturaleza" para evitar la angustia[cite: 81, 82].</li>
+                <li><strong>Pasión inútil:</strong> El deseo humano de ser plenamente consciente y, a la vez, sólido como una cosa (ser Dios), lo cual es imposible[cite: 265, 266].</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-heidegger" class="modal-overlay">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('modal-heidegger')">&times;</button>
+            <h2>Martin Heidegger</h2>
+            <p>Sartre hereda de Heidegger la noción del ser humano como un ser "arrojado" al mundo sin haberlo elegido[cite: 128, 133].</p>
+            <ul>
+                <li><strong>Dasein:</strong> El "ser-ahí", un ser que no es estático, sino que está siempre involucrado y proyectado en el mundo[cite: 130].</li>
+                <li><strong>Temporalidad:</strong> El ser humano vive en tres dimensiones simultáneas: el pasado (facticidad), el presente (caída/cotidianidad) y el futuro (proyecto/posibilidades)[cite: 125, 126].</li>
+                <li><strong>Sorge (Cuidado):</strong> La esencia del Dasein es el cuidado, la preocupación por su propia existencia ante la finitud[cite: 131].</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-ontologia" class="modal-overlay">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('modal-ontologia')">&times;</button>
+            <h2>La Grieta en el Ser</h2>
+            <p>Sartre divide la realidad en dos categorías ontológicas clave[cite: 233]:</p>
+            <ul>
+                <li><strong>Ser en-sí (En-soi):</strong> Lo inerte, las cosas (una piedra, una mesa). Son lo que son, completas y opacas[cite: 236, 245].</li>
+                <li><strong>Ser para-sí (Pour-soi):</strong> El ser humano consciente. Es una "falla" o "grieta" en el ser compacto; una nada que permite la libertad y la pregunta[cite: 247, 249].</li>
+            </ul>
+            <p>El Para-sí nunca coincide consigo mismo, siempre está "escapando" hacia el futuro en forma de proyecto[cite: 260, 263].</p>
+        </div>
+    </div>
+
+    <div id="modal-ortega" class="modal-overlay">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('modal-ortega')">&times;</button>
+            <h2>Ortega y Gasset</h2>
+            <p>El filósofo español coincide con Sartre en que "el hombre no tiene naturaleza, tiene historia"[cite: 211]. Sin embargo, introduce un matiz vital: <strong>La Circunstancia</strong>.</p>
+            <p><em>"Yo soy yo y mi circunstancia"</em>[cite: 221]. Mientras Sartre ve la libertad como algo casi absoluto, Ortega sostiene que nos definimos en diálogo con nuestro contexto histórico y cultural[cite: 222, 229]. Para Ortega, la vida es un "quehacer" y un proyecto que se abraza con una visión más vitalista y menos angustiosa que la francesa[cite: 213, 223].</p>
+        </div>
+    </div>
+
+    <div id="modal-actualidad" class="modal-overlay">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('modal-actualidad')">&times;</button>
+            <h2>Existencialismo en 2026</h2>
+            <p>Hoy, estas ideas resuenan en las críticas a la sociedad digital. La "atomización" social fomenta el egoísmo y la indiferencia, transformando al individuo en lo que Giorgio Agamben llama <em>homo sacer</em>: un sujeto cuya vida carece de valor sagrado y puede ser instrumentalizada.</p>
+            <p>Releer a Sartre ayuda a comprender la sensación de vacío o "náusea" ante un mundo donde la mirada del otro a menudo nos "cosifica", reduciendo nuestra libertad a meros perfiles de datos.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        window.onclick = function(event) {
+            if (event.target.className === 'modal-overlay') {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>

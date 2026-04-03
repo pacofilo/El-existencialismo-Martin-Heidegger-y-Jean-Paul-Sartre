@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El existencialismo: Martin Heidegger y Jean-Paul Sartre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=eHRKMHjnG5Zh9soZaK00ogyPzvLK8ld-TjnX86szzxMXqle8oSn2UbMNBPH7qHSKWwamo3Z8gwAY3t15lxvzwEMJYIQXYCTQ8O0JBj8QeDnJTd8BmJ7TFqixFaUSZUI-SwW9xOfV5YAJYpevBQZ0SFHddP1uTJR5rwWlsKXEtXJc33Hgfg6SSfjvQJT-bSIb-dJNMKE4a0YjmchCEgx0DJUJjARXIKRTEWbV3NGYUimlTQg_VqaqRJ6vcBiJvlZ-LX_pksXCQdpD7uGjMBqNJg" charset="UTF-8"></script><style>
+:root {
+  --bg-primary:#FAF9F5; --bg-secondary:#F0EDE6; --bg-card:#FFFFFF;
+  --text-primary:#2D2B28; --text-secondary:#6B6560; --text-tertiary:#9B9590;
+  --accent:#D97757; --accent-hover:#C4603F; --accent-light:rgba(217,119,87,.08);
+  --blue-accent:#3B82B6; --blue-light:rgba(59,130,182,.08);
+  --green-accent:#4A9D6E; --green-light:rgba(74,157,110,.08);
+  --purple-accent:#7C5CBF; --purple-light:rgba(124,92,191,.08);
+  --gold-accent:#B8860B; --gold-light:rgba(184,134,11,.08);
+  --border:rgba(0,0,0,.06); --border-hover:rgba(0,0,0,.12);
+  --shadow-sm:0 1px 2px rgba(0,0,0,.04); --shadow-md:0 2px 8px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-xl:0 8px 32px rgba(0,0,0,.10), 0 4px 8px rgba(0,0,0,.06);
+  --radius:12px; --radius-sm:8px; --radius-lg:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.8;font-size:19px}
+.topbar{position:sticky;top:0;z-index:100;background:rgba(250,249,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.topbar-left{display:flex;align-items:center;gap:12px}
+.topbar-logo{font-family:'Instrument Serif',serif;font-size:22px;color:var(--accent)}
+.topbar-divider{width:1px;height:20px;background:var(--border-hover)}
+.topbar-section{font-size:14px;color:var(--text-secondary);font-weight:500}
+.btn-home,.btn-jump,.btn-back,.btn-modal-action{font-family:inherit;cursor:pointer;transition:.2s}
+.btn-home{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius-sm);font-size:13px;font-weight:600;text-decoration:none}
+.btn-home:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.hero{max-width:1200px;margin:0 auto;padding:56px 24px 34px;text-align:center}
+.hero-overline{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent);margin-bottom:16px;padding:6px 14px;background:var(--accent-light);border-radius:20px}
+.hero h1{font-family:'Instrument Serif',serif;font-size:clamp(34px,5.6vw,54px);font-weight:400;line-height:1.12;margin-bottom:18px;letter-spacing:-.5px}
+.hero h1 em{color:var(--accent);font-style:italic}
+.hero-subtitle{font-size:20px;color:var(--text-secondary);max-width:880px;margin:0 auto 26px}
+.hero-meta{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;color:var(--text-tertiary);font-size:13px}
+.intro-quote{max-width:1200px;margin:0 auto 42px;padding:28px 32px;background:var(--gold-light);border-left:4px solid var(--gold-accent);border-radius:0 var(--radius) var(--radius) 0;font-family:'Instrument Serif',serif;font-size:23px;font-style:italic;line-height:1.6}
+.intro-quote cite{display:block;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text-tertiary);margin-top:10px;font-style:normal}
+.content{max-width:1200px;margin:0 auto;padding:0 24px 44px}
+.section-block{margin-bottom:28px}
+.section-block-header{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.section-number{font-family:'Instrument Serif',serif;font-size:32px;color:var(--accent);opacity:.5;line-height:1}
+.section-label h2{font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;line-height:1.2}
+.overline{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent)}
+.text-content p{margin-bottom:14px}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:48px}
+.card-btn{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:left;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+.card-btn:hover{border-color:var(--border-hover);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.card-number{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--text-tertiary)}
+.card-title{font-family:'Instrument Serif',serif;font-size:22px;line-height:1.28;color:var(--text-primary)}
+.card-desc{font-size:16px;color:var(--text-secondary);line-height:1.55;padding-right:24px}
+.card-arrow{position:absolute;right:20px;top:18px;color:var(--accent);font-size:20px}
+.card-btn.blue{border-left:3px solid var(--blue-accent)} .card-btn.blue:hover{background:var(--blue-light)}
+.card-btn.green{border-left:3px solid var(--green-accent)} .card-btn.green:hover{background:var(--green-light)}
+.card-btn.purple{border-left:3px solid var(--purple-accent)} .card-btn.purple:hover{background:var(--purple-light)}
+.card-btn.gold{border-left:3px solid var(--gold-accent)} .card-btn.gold:hover{background:var(--gold-light)}
+.card-btn.accent{border-left:3px solid var(--accent)} .card-btn.accent:hover{background:var(--accent-light)}
+.utility-bar{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 40px}
+.btn-jump{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:14px;font-weight:600;color:var(--text-secondary);text-decoration:none}
+.btn-jump:hover{background:var(--bg-secondary);color:var(--text-primary);border-color:var(--border-hover)}
+.modal-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);justify-content:center;align-items:center;padding:24px;opacity:0;transition:opacity .3s ease}
+.modal-overlay.active{display:flex;opacity:1}
+.modal-box{background:var(--bg-primary);border-radius:var(--radius-lg);max-width:980px;width:100%;max-height:86vh;overflow-y:auto;box-shadow:var(--shadow-xl)}
+.modal-box.fullscreen{max-width:100%;max-height:100%;height:100vh;border-radius:0}
+.modal-topbar,.page-topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(250,249,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.modal-topbar-title{font-family:'Instrument Serif',serif;font-size:18px}
+.modal-topbar-actions{display:flex;gap:8px}
+.btn-modal-action{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg-card);color:var(--text-secondary);font-size:18px}
+.btn-modal-action:hover{background:var(--bg-secondary);color:var(--text-primary);border-color:var(--border-hover)}
+.modal-content,.page-content{padding:32px}
+.modal-content h3,.page-content h3{font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;margin:0 0 20px}
+.modal-content h4,.page-content h4{font-size:19px;font-weight:700;margin:24px 0 10px;color:var(--accent)}
+.modal-content p,.page-content p{margin-bottom:14px}
+.highlight-box{background:var(--accent-light);border-left:3px solid var(--accent);padding:16px 20px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:18px 0}
+.quote-box{background:var(--gold-light);border-left:3px solid var(--gold-accent);padding:16px 20px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:18px 0;font-family:'Instrument Serif',serif;font-size:20px;line-height:1.6}
+.page-overlay{display:none;position:fixed;inset:0;z-index:400;background:var(--bg-primary);overflow-y:auto;opacity:0;transition:opacity .3s ease}
+.page-overlay.active{display:block;opacity:1}
+.page-topbar-left{display:flex;align-items:center;gap:12px}
+.btn-back{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:13px;font-weight:600;color:var(--text-secondary)}
+.btn-back:hover{background:var(--bg-secondary);color:var(--text-primary);border-color:var(--border-hover)}
+.page-content{max-width:980px;margin:0 auto;padding:38px 24px 60px}
+.page-content h2{font-family:'Instrument Serif',serif;font-size:38px;font-weight:400;margin-bottom:22px;line-height:1.2}
+.divider{max-width:1200px;margin:0 auto 40px;padding:0 24px} .divider-line{border:none;border-top:1px solid var(--border)}
+.footer{text-align:center;padding:32px 24px 40px;font-size:13px;color:var(--text-tertiary);border-top:1px solid var(--border)}
+.footer-phi{font-family:'Instrument Serif',serif;font-size:28px;color:var(--accent);opacity:.35;margin-bottom:8px}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease, transform .5s ease} .reveal.visible{opacity:1;transform:translateY(0)}
+@media (max-width: 700px) {
+ body{font-size:17px} .hero{padding:38px 16px 28px} .content{padding:0 16px 36px}
+ .hero-subtitle{font-size:18px} .modal-content,.page-content{padding:24px 18px} .topbar{padding:10px 16px} .topbar-section{display:none}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-left">
+    <span class="topbar-logo">φ</span>
+    <div class="topbar-divider"></div>
+    <span class="topbar-section">Historia de la Filosofía · 2º Bachillerato</span>
+  </div>
+  <a class="btn-home" href="#inicio">Inicio</a>
+</header>
+
+<section class="hero" id="inicio">
+  <span class="hero-overline">Existencialismo · Heidegger y Sartre</span>
+  <h1>El existencialismo:<br><em>Martin Heidegger y Jean-Paul Sartre</em></h1>
+  <p class="hero-subtitle">Una síntesis visual e interactiva sobre el existencialismo, con especial atención a la libertad, la angustia, la autenticidad y la temporalidad en Martin Heidegger y Jean-Paul Sartre.</p>
+  <div class="hero-meta"><span>📚 Historia de la Filosofía</span><span>🎓 2º Bachillerato</span><span>🧭 Navegación interactiva</span></div>
+</section>
+
+<div class="intro-quote reveal">«El hombre está condenado a ser libre».<cite>— Jean-Paul Sartre, idea central trabajada en los apuntes de clase</cite></div>
+
+<div class="content">
+  <div class="section-block reveal">
+    <div class="section-block-header">
+      <div class="section-number">01</div>
+      <div class="section-label">
+        <span class="overline">Mapa de contenidos</span>
+        <h2>Explora el tema completo</h2>
+      </div>
+    </div>
+    <div class="text-content">
+      <p>He reorganizado el material en cinco bloques para que la lectura sea más clara, pero el texto de los apuntes se mantiene dentro de cada apartado. Puedes abrir ventanas emergentes, pasar a páginas internas y ampliar cada bloque a pantalla completa.</p>
+    </div>
+    <div class="utility-bar">
+      <a class="btn-jump" href="#bloques">Ir a los bloques</a>
+      <button class="btn-jump" onclick="openPage('section3')">Abrir Sartre</button>
+      <button class="btn-jump" onclick="openPage('section5')">Abrir Heidegger</button>
+      <a class="btn-jump" href="Exsitencialismo breve resumen.html">Resumen breve</a>
+    </div>
+  </div>
+
+  <div class="cards-grid" id="bloques">
+    
+        <button class="card-btn blue reveal" onclick="openModal('section1')">
+            <span class="card-number">01</span>
+            <span class="card-title">Introducción al existencialismo</span>
+            <span class="card-desc">Contexto y tesis iniciales</span>
+            <span class="card-arrow">→</span>
+        </button>
+        <button class="card-btn green reveal" onclick="openPage('section2')">
+            <span class="card-number">02</span>
+            <span class="card-title">Ortega y Gasset y la existencia</span>
+            <span class="card-desc">Similitudes y diferencias con Sartre</span>
+            <span class="card-arrow">→</span>
+        </button>
+        <button class="card-btn purple reveal" onclick="openPage('section3')">
+            <span class="card-number">03</span>
+            <span class="card-title">El ser para sí en Sartre</span>
+            <span class="card-desc">Ontología, en-sí y para-sí</span>
+            <span class="card-arrow">→</span>
+        </button>
+        <button class="card-btn gold reveal" onclick="openModal('section4')">
+            <span class="card-number">04</span>
+            <span class="card-title">La libertad: condena o regalo</span>
+            <span class="card-desc">Angustia, responsabilidad y autenticidad</span>
+            <span class="card-arrow">→</span>
+        </button>
+        <button class="card-btn accent reveal" onclick="openPage('section5')">
+            <span class="card-number">05</span>
+            <span class="card-title">Heidegger y la temporalidad</span>
+            <span class="card-desc">Dasein, Sorge y proyección</span>
+            <span class="card-arrow">→</span>
+        </button>
+  </div>
+</div>
+
+<div class="divider"><hr class="divider-line"></div>
+<footer class="footer">
+  <div class="footer-phi">φ</div>
+  <p>Departamento de Filosofía · Historia de la Filosofía · 2º Bachillerato<br>IES Alquipir · Francisco Jiménez Amor</p>
+</footer>
+
+
+<div class="modal-overlay" id="section1" onclick="overlayClose(event, 'section1', 'modal')">
+  <div class="modal-box">
+    <div class="modal-topbar">
+      <span class="modal-topbar-title">Introducción al existencialismo</span>
+      <div class="modal-topbar-actions">
+        <button class="btn-modal-action" onclick="toggleFullscreen(this)" title="Pantalla completa">⤢</button>
+        <button class="btn-modal-action" onclick="closeModal('section1')" title="Cerrar">✕</button>
+      </div>
+    </div>
+    <div class="modal-content"><p>Introducción al Existencialismo</p>
+<p>Contexto histórico: Surgió en Europa post-Segunda Guerra Mundial (años 40-50). Filósofos como Jean-Paul Sartre (1905-1980) y Simone de Beauvoir (1908-1986) cuestionan el sentido de la vida en un mundo absurdo y sin Dios (ateísmo existencialista). Influenciados por Nietzsche y Kierkegaard.</p>
+<p>Ocupación nazi de Francia (1940-1944). Cada día la gente tenía que elegir: colaborar, resistir en silencio, unirse a la Resistencia o fingir que no pasaba nada.  Esta situación extrema ilustraba perfectamente las tesis existencialistas:</p>
+<p>No hay Dios ni valores eternos que te digan qué hacer.</p>
+<div class="quote-box">“El mundo es absurdo, Dios no existe, nadie te va a salvar… pero precisamente por eso tú eres totalmente responsable de lo que haces con tu vida.”</div>
+<p>Estás condenado a ser libre: aunque te apunten con un fusil, la elección final es tuya.</p>
+<p>La “mala fe” se veía en todas partes: el colaboracionista que decía “no tuve opción”, el burgués que “solo cumplía órdenes”.</p>
+<p>Idea central: &quot;La existencia precede a la esencia&quot; (Sartre). Es decir, no nacemos con un propósito fijo; nosotros creamos nuestro propio sentido a través de elecciones libres.</p>
+<p>Ortega y Gasset, como filósofo español influido por el existencialismo, comparte algunos puntos de contacto con la idea central de Sartre de que &quot;la existencia precede a la esencia&quot;. Sin embargo, no lo expresa de manera idéntica, ya que su pensamiento se enraíza en una visión más histórica y circunstancial de la vida humana. Te explico a continuación, basándome en sus obras clave como Meditaciones del Quijote (1914), El tema de nuestro tiempo (1923) y La rebelión de las masas (1930), qué dice al respecto, con similitudes y diferencias.</p>
+<h4>Similitudes con Sartre:</h4>
+<p>El ser humano no tiene una esencia fija o predeterminada: Ortega coincide en que el hombre no nace con una &quot;naturaleza&quot; inmutable o un propósito divino/impuesto. En cambio, el ser humano se construye a sí mismo a través de sus acciones y decisiones. Una frase emblemática de Ortega es: &quot;El hombre no tiene naturaleza, lo que tiene es historia&quot;. Esto implica que no hay un &quot;yo&quot; esencial preexistente; en su lugar, nos definimos por lo que hacemos en el tiempo y en interacción con el mundo.</p></div>
+  </div>
+</div>
+<div class="modal-overlay" id="section4" onclick="overlayClose(event, 'section4', 'modal')">
+  <div class="modal-box">
+    <div class="modal-topbar">
+      <span class="modal-topbar-title">La libertad: condena o regalo</span>
+      <div class="modal-topbar-actions">
+        <button class="btn-modal-action" onclick="toggleFullscreen(this)" title="Pantalla completa">⤢</button>
+        <button class="btn-modal-action" onclick="closeModal('section4')" title="Cerrar">✕</button>
+      </div>
+    </div>
+    <div class="modal-content"><p>En resumen, el pour-soi sartreano es una reinterpretación existencialista del Dasein heideggeriano, especialmente del &quot;ser arrojado&quot;: ambos capturan la idea de un ser humano &quot;lanzado&quot; a la existencia sin fundamento, obligado a proyectarse y enfrentar la angustia de la libertad. Sin Heidegger, no habría Sartre tal como lo conocemos —es una deuda directa.</p>
+<p>Estructura tripartita de la Sorge (los tres momentos cooriginarios)</p>
+<p>Facticidad → Haber-sido arrojado. Estamos &quot;ya siempre&quot; en una situación concreta que no elegimos del todo: nacemos en un cuerpo, una familia, una época histórica, una cultura. Somos arrojados al mundo y debemos hacernos cargo de eso. Ejemplo: No elegiste nacer en el siglo XXI en España, pero estás &quot;ya ahí&quot; y debes lidiar con ello.</p>
+<p>Caída → Estar en medio de las cosas y los otros. Nos absorbemos en el mundo cotidiano,  viviendo dispersos en lo inmediato, en el chisme, el trabajo rutinario, evitando enfrentarnos a nosotros mismos (caemos en la inautenticidad del &quot;uno&quot; (das Man: lo que &quot;se hace&quot;, &quot;se dice&quot;).  Ejemplo: Pasar el día scrollando redes o trabajando mecánicamente sin cuestionar.</p>
+<h4>Tipos de cuidado en el mundo cotidiano:</h4>
+<p>nos ocupamos de las cosas (útiles o herramientas).  Ej.: arreglar una bici, usar un martillo.</p>
+<p>nos preocupamos por los otros (Fürsorge). Puede ser auténtico (ayudar liberando al otro) o inauténtico (dominar, &quot;hacer por él&quot;).</p>
+<p>Estos tres se unen en la Sorge como una estructura temporal: el tiempo no es algo externo (reloj), sino la forma en que existimos como cuidado.</p>
+<p>Pasado (arrojado)</p>
+<p>Presente (caída en el mundo)</p>
+<p>Futuro (proyección)</p>
+<p>Existenciariedad → Proyección hacia el futuro. El Dasein se proyecta siempre hacia posibilidades. No es &quot;lo que es&quot;, sino &quot;lo que puede ser&quot;. Vivimos anticipándonos a nosotros mismos: elegimos, planeamos, nos dirigimos hacia metas. Ejemplo: Estudias para ser médico → te proyectas hacia un futuro posible.</p>
+<p>Conexión con autenticidad e inautenticidad</p>
+<p>En la autenticidad asumimos nuestra finitud (ser-para-la-muerte), anticipamos la muerte como posibilidad propia, y vivimos con resolución, hacernos cargo auténticamente de nuestras posibilidades. La angustia despierta esta posibilidad al mostrar la nada y la falta de fundamento.</p>
+<p>Resumen simple para entenderlo: Imagina la vida como un &quot;estar siempre ocupado en algo&quot;: Todo eso junto es la Sorge: no una emoción, sino el ser mismo del humano. siempre &quot;se cuida de...&quot;, &quot;se ocupa de...&quot;, &quot;se preocupa por...&quot;. Sin Sorge no hay existencia humana.</p>
+<p>Te preocupas por el futuro (proyectas qué serás).</p>
+<p>Llevas encima tu pasado y circunstancias (no elegidas del todo).</p>
+<p>Estás inmerso en el mundo diario (trabajo, gente, cosas).</p></div>
+  </div>
+</div>
+
+<div class="page-overlay" id="section2">
+  <div class="page-topbar">
+    <div class="page-topbar-left">
+      <button class="btn-back" onclick="closePage('section2')">← Volver a la principal</button>
+      <span class="modal-topbar-title">Ortega y Gasset y la existencia</span>
+    </div>
+    <button class="btn-modal-action" onclick="togglePageFullscreen('section2')" title="Pantalla completa">⤢</button>
+  </div>
+  <div class="page-content"><p>La vida como proyecto y elección libre: Para Ortega, la vida es un &quot;quehacer&quot; o un &quot;proyecto vital&quot;. En El tema de nuestro tiempo, enfatiza que el ser humano debe &quot;hacerse cargo de su circunstancia&quot; y crear su propio destino mediante elecciones conscientes. Esto resuena con Sartre, ya que ambos ven la existencia como un proceso de auto-creación, de invención de nuestro sentido: la vida es la realidad radical donde radican las demás realidades.</p>
+<p>Libertad y responsabilidad: Al igual que Sartre, Ortega ve la libertad como una carga. En su filosofía, el hombre es &quot;náufrago&quot; en la vida, obligado a nadar o hundirse mediante sus decisiones. No hay escapatoria de esta responsabilidad; ignorarla lleva a la &quot;deshumanización&quot; o a vivir como &quot;masa&quot; (como critica en La rebelión de las masas), en lugar de como individuo auténtico que forja su propio camino.</p>
+<h4>Diferencias clave:</h4>
+<p>Énfasis en la circunstancia: Mientras Sartre pone el foco en la libertad absoluta y el &quot;proyecto&quot; individual (casi en vacío, sin determinismos), Ortega integra el contexto histórico y social. Su famosa máxima &quot;Yo soy yo y mi circunstancia, y si no la salvo a ella, no me salvo yo&quot; (de Meditaciones del Quijote) sugiere que la auto-creación no es puramente subjetiva: depende de las &quot;circunstancias&quot; (entorno, historia, cultura). No precedes a la esencia en un aislamiento radical, sino que te defines en diálogo con el mundo. Sartre es más &quot;angustioso&quot; y nihilista inicial (la nada precede al ser), mientras Ortega es más optimista y vitalista.</p>
+<p>Crítica implícita al existencialismo puro: En obras posteriores, Ortega critica visiones demasiado subjetivistas (como la de Sartre), argumentando que ignoran la &quot;realidad radical&quot; de la vida como interacción. Para él, el sentido no se crea de la nada absoluta, sino que emerge de la &quot;vocación&quot; personal enraizada en la historia colectiva.</p>
+<p>Influencias y contexto: Ortega precede a Sartre cronológicamente y no usa exactamente la fórmula &quot;existencia precede a la esencia&quot; (que Sartre populariza en El existencialismo es un humanismo, 1946). Ortega bebe de Nietzsche, Husserl y Heidegger, pero su existencialismo es &quot;racio-vitalista&quot;: la razón no es enemiga de la vida, sino su herramienta para crear sentido. No hay tanto énfasis en el &quot;absurdo&quot; como en Sartre, sino en la &quot;perspectiva&quot; única de cada individuo para interpretar y transformar la realidad.</p>
+<p>En resumen, Ortega y Gasset estaría de acuerdo con Sartre en que no hay un propósito fijo al nacer y que creamos nuestro sentido mediante elecciones libres, pero lo matiza con la idea de que esto ocurre siempre en un contexto circunstancial e histórico.</p>
+<div class="highlight-box"><strong>Pregunta para alumnos: ¿Creéis que el ser humano nace con un destino o lo construye? (Ej. un árbol es lo que es desde el principio, pero ¿y una persona?).</strong></div>
+<p>El &quot;Ser para sí&quot; en Jean-Paul Sartre</p>
+<p>Distinción ontológica (del ser): Sartre divide la realidad en dos tipos de ser (en su obra El ser y la nada, 1943).  “El en-sí es; el para-sí no es lo que es y es lo que no es.”  Las cosas son; el hombre se hace.  Uno es pleno (no tiene nada que le falte). El otro es puro agujero, nada, libertad.</p>
+<p>Ser en sí (en-soi): Cosas inertes, sin conciencia. Son lo que son, completas y fijas. Ej.: una roca, un libro. No eligen, no sufren, no cambian por sí solas.</p>
+<p>Es el modo de ser de todo lo que no es conciencia: piedras, árboles, mesas, moléculas, el cuerpo como objeto, etc.  El en-sí es el mundo de las cosas tal como se revelan a la conciencia: sólido, indiferente, absurdo en su pura facticidad.</p></div>
+</div>
+<div class="page-overlay" id="section3">
+  <div class="page-topbar">
+    <div class="page-topbar-left">
+      <button class="btn-back" onclick="closePage('section3')">← Volver a la principal</button>
+      <span class="modal-topbar-title">El ser para sí en Sartre</span>
+    </div>
+    <button class="btn-modal-action" onclick="togglePageFullscreen('section3')" title="Pantalla completa">⤢</button>
+  </div>
+  <div class="page-content"><p>Los animales quedan fuera del pour-soi. No tienen esa “nada” que permite la libertad absoluta y la elección.</p>
+<p>Sartre es muy cartesiano en esto: los animales son como máquinas vivientes (res extensa). Actúan por instinto, por determinismo biológico. No eligen su esencia. No hay “existencia precede a la esencia” para ellos: tienen una esencia fija (el perro es perro, el león es león) y la cumplen sin distancia.</p>
+<h4>Características fundamentales:</h4>
+<p>Es lo que es: plena coincidencia consigo mismo. No hay distancia, ni interrogación, ni posibilidad de ser otra cosa.</p>
+<p>Plenitud absoluta: está “lleno” de ser, lleno de sí mismo. No le falta nada, no tiene “agujeros”. Es opaco, macizo, denso.</p>
+<p>De pronto, en medio de ese ser compacto, aparece una grieta.</p>
+<p>Esa grieta es el ser humano.</p>
+<p>El para-sí es «un agujero de ser en el seno del Ser» (El ser y la nada, p. 115 aprox.).</p>
+<p>Es «una fisura, una falla» (como la falla geológica que rompe la continuidad de la roca).</p>
+<p>Sin esa falla no habría conciencia. El mundo seguiría siendo puro en-sí, opaco, indiferente, sin preguntas, sin tiempo, sin libertad.</p>
+<p>Inercia y facticidad: no se elige ni se cambia a sí mismo. Simplemente está ahí. Sartre lo llama “masa de ser”.</p>
+<p>Sin negatividad ni temporalidad: no niega nada, no proyecta futuro. El tiempo no lo afecta desde dentro (solo desde fuera, cuando la conciencia lo mira).</p>
+<p>Ejemplo clásico: una piedra es completamente piedra. No puede “no ser” piedra ni desear ser otra cosa. Es pura positividad.</p>
+<p>Ser para sí (pour-soi): El ser humano consciente. Somos un &quot;hueco&quot; en la realidad: siempre proyectándonos hacia el futuro, nunca completos. Somos libres, pero eso genera angustia (angoisse) porque nada nos define de antemano.</p>
+<p>Es el modo de ser del ser humano (la conciencia, la “realidad humana” o “para-sí”).</p>
+<h4>Características fundamentales (todo lo contrario del en-sí):</h4>
+<p>No es lo que es: la conciencia nunca coincide consigo misma. Siempre es “conciencia de…algo ” (de una manzana, de un recuerdo, de ti mismo, de un deseo).. Es distancia, separación, nada.  Tu conciencia nunca puede decir “ya está, soy esto y punto”. La  conciencia siempre está escapando de sí misma hacia algo más. Por eso eres libre… y por eso a veces sientes angustia (porque nada te define de una vez por todas).</p>
+<p>El sueño imposible del para-sí es llegar a ser en-sí-para-sí (un ser que sea a la vez consciente y pleno, fijo y libre): eso sería Dios, y Sartre dice que es contradictorio e imposible. Por eso el hombre es “una pasión inútil”.</p>
+<p>Es decir: quiere ser fundamento de sí mismo (causa sui) y al mismo tiempo consciente de serlo.</p>
+<p>Quiere ser el ser que se da su propio ser y lo conoce perfectamente: Dios.</p>
+<div class="quote-box">“La pasión inútil” es una de las frases más famosas (y más malinterpretadas) de Sartre. Aparece casi al final de El ser y la nada  resume todo el drama ontológico del ser humano.</div>
+<p>Pasión aquí no significa “emoción fuerte” o “amor romántico”. En el sentido filosófico clásico (y en Sartre), pasión viene del latín passio = “sufrimiento”, “ser afectado”, “ser arrastrado”. Es el movimiento por el cual el para-sí se lanza entero hacia algo, se entrega completamente.</p>
+<p>Inútil significa que ese esfuerzo gigantesco no logra su objetivo final, aunque el esfuerzo sea real y necesario.</p>
+<p>Ejemplos</p>
+<p>Es nihilación: introduce la nada en el ser. Cuando percibo una mesa, la conciencia “niega” que sea ella misma la mesa; se pone a distancia de ella. Sartre dice: “La conciencia es un ser por el cual la nada viene al mundo”.</p>
+<p>Libertad absoluta: al no ser nada fijo, está condenada a ser libre. Debe elegir constantemente lo que va a ser. No hay esencia previa (“la existencia precede a la esencia”).</p>
+<p>Libertad radical: Siempre podemos elegir, incluso en situaciones extremas (ej. un prisionero elige su actitud ante la cárcel).</p>
+<p>Temporalidad ek-stática: vive fuera de sí (éxtasis): Esta distancia o escisión (la nada que lo fisura) lo obliga a salir de sí (ek-stasis) hacia el pasado (facto), el presente (fuga) y el futuro (proyecto).</p>
+<p>Pasado: lo que ya no soy (facticidad).</p>
+<p>Presente: pura fuga.</p>
+<p>Futuro: lo que aún no soy (proyecto).</p>
+<p>Trascendencia: siempre se proyecta más allá de sí misma hacia el mundo y hacia posibilidades.</p>
+<p>Angustia (angoisse): sensación de vértigo ante la libertad total. Por eso inventamos “mala fe” (mauvaise foi): mentiras que nos contamos a nosotros mismos para fingir que somos “en-sí”.</p>
+<p>Mala fe (mauvaise foi): Negar nuestra libertad para evitar responsabilidad. Ej.: decir &quot;soy así por naturaleza&quot; en vez de admitir que elegimos serlo.</p>
+<p>Un estudiante que dice &quot;No puedo aprobar porque soy vago por naturaleza&quot; está en mala fe. En realidad, elige ser vago cada día.</p>
+<p>La mirada del otro: Somos &quot;cosificados&quot; por los demás (nos ven como &quot;en sí&quot;), pero nosotros nos rebelamos como &quot;para sí&quot;. Me convierto en en-sí para él (un ser macizo, cosificado, definido desde fuera)</p>
+<div class="highlight-box"><strong>Actividad: ¿En qué situaciones os sentís &quot;para sí&quot; (libres) vs. &quot;en sí&quot; (fijos por otros)?</strong></div>
+<div class="quote-box">Cita clave &quot;El hombre está condenado a ser libre&quot; (Sartre). Discutir: ¿Es una condena o un regalo?</div>
+<p>La libertad no es un atributo opcional del ser humano, sino su condición inescapable.</p>
+<div class="quote-box">&quot;Dostoievsky escribe: &#x27;Si Dios no existiera, todo estaría permitido&#x27;. Este es el punto de partida del existencialismo. En efecto, todo está permitido si Dios no existe y, en consecuencia, el hombre está abandonado, porque no encuentra ni en sí ni fuera de sí una posibilidad de aferrarse. No encuentra ante todo excusas. Si, en efecto, la existencia precede a la esencia, no se podrá jamás explicar la referencia a una naturaleza humana dada y fija; dicho de otro modo, no hay determinismo, el hombre es libre, el hombre es libertad. Si, por otra parte, Dios no existe, no encontramos frente a nosotros valores u órdenes que legitimen nuestra conducta. Así, no tenemos ni detrás ni delante de nosotros, en el dominio luminoso de los valores, justificaciones o excusas. Estamos solos, sin excusas. Es lo que expresaré diciendo que el hombre está condenado a ser libre. Condenado, porque no se ha creado a sí mismo, y sin embargo, por otro lado, libre, porque una vez arrojado al mundo es responsable de todo lo que hace.&quot;</div>
+<p>Por qué es una &quot;condena&quot; (el aspecto angustiante)</p>
+<p>Ausencia de guías externas: Sin Dios o valores absolutos, no hay excusas ni justificaciones preestablecidas. Estamos &quot;abandonados&quot;, arrojados al mundo sin un manual. Cada decisión es nuestra responsabilidad total, lo que genera angustia (angoisse): el vértigo de saber que todo depende de nosotros. Por ejemplo, si eliges una carrera, un amor o una acción moral, no puedes culpar a la &quot;naturaleza humana&quot; o al destino; eres responsable no solo de ti, sino de cómo defines la humanidad entera* (ya que tus elecciones son un ejemplo para los demás).</p>
+<p>La carga de la responsabilidad: Sartre ve la libertad como una obligación perpetua. No podemos &quot;no elegir&quot; (incluso la inacción es una elección), lo que nos condena a inventarnos sin descanso. Esto puede llevar a la mala fe (mauvaise foi): autoengaños para evadir esta libertad, como fingir que las pasiones o la sociedad nos determinan.</p>
+<p>Ejemplo cotidiano: Imagina decidir romper una relación tóxica. Es liberador, pero también angustiante: no hay &quot;deber ser&quot; divino que te valide; solo tú respondes por el dolor causado o evitado. Para Sartre, esto es una condena porque revela la &quot;nada&quot; subyacente: no hay fundamento sólido para tus elecciones.</p>
+<p>Por qué podría ser un &quot;regalo&quot; (el aspecto liberador)</p>
+<p>Potencial para la autenticidad: Aunque Sartre enfatiza la angustia, la libertad es también una oportunidad para la autocreación auténtica. Al asumir esta &quot;condena&quot;, podemos vivir con compromiso: elegir proyectos que den sentido a nuestra existencia, como el activismo político o el arte (Sartre mismo fue un intelectual comprometido contra el nazismo). Es un regalo porque nos libera de determinismos (biológicos, sociales o divinos), permitiendo reinventarnos. En su existencialismo posterior (influido por el marxismo), Sartre ve esta libertad como base para la solidaridad humana y la transformación social.</p>
+<p>Empoderamiento existencial: Sin esencia fija, no estamos limitados por &quot;lo que deberíamos ser&quot;. Esto es empoderador: puedes definir tu vida como un &quot;porvenir virgen&quot; (futuro abierto). La angustia es el precio, pero el beneficio es la posibilidad de una vida significativa, creada por uno mismo.</p>
+<p>Ejemplo positivo: Un artista que elige dedicarse a su pasión pese a la pobreza; la libertad le &quot;condena&quot; a asumir riesgos, pero le regala la realización personal. Filósofos como Simone de Beauvoir (pareja de Sartre) extendieron esto al feminismo: la libertad es un regalo para romper roles impuestos.</p>
+<p>Equilibrio: ¿Condena o regalo? Una perspectiva dual</p>
+<p>En el fondo, para Sartre, es ambas cosas a la vez. Es una condena porque implica soledad, responsabilidad y angustia en un mundo sin sentido previo; no hay escapatoria de esta libertad (incluso el suicidio es una elección libre). Pero es un regalo porque rechaza el fatalismo: nos invita a actuar, a &quot;inventar al hombre&quot; con coraje.</p>
+<p>Esto contrasta con visiones más optimistas, como la de Ortega y Gasset (en su &quot;espíritu jovial&quot;), donde la libertad se abraza con alegría y vocación personal, sin tanto énfasis en la angustia. Sartre, influido por Heidegger, ve la libertad como un peso existencial, pero uno que humaniza: nos hace plenamente responsables, evitando vidas inauténticas.</p>
+<p>En contexto actual (2026), esta idea resuena en debates sobre IA, libertad personal y crisis existenciales: ¿es la hiperconectividad una &quot;condena&quot; a elegir constantemente (redes sociales), o un regalo de expresión ilimitada? Para estudiantes de bachillerato, invita a reflexionar: en tu vida, ¿la libertad de elegir estudios o amigos te angustia o te empodera?</p>
+<p>En resumen, Sartre inclina la balanza hacia la &quot;condena&quot; por la carga emocional, pero implícitamente reconoce el regalo de la autonomía. Como dice en su texto: esta libertad nos obliga a &quot;inventar al hombre&quot; sin excusas, un desafío que puede ser liberador si se asume auténticamente.</p>
+<p>Conexión con Heidegger: La temporalidad y el futuro: Tanto el Dasein como el pour-soi son esencialmente temporales.</p>
+<p>Heidegger ve el Dasein como &quot;cuidado&quot; (Sorge), extendido entre pasado (arrojado), presente (caído) y futuro (proyectado). El Dasein se despliega a través de las tres dimensiones del tiempo de manera simultánea y unitaria: está ya arrojado en un pasado (factum), caído en el presente cotidiano , y proyectado hacia el futuro (posibilidades). Esta &quot;extensión&quot; es la unidad estructural del cuidado (Sorge): el Dasein se cuida anticipándose al futuro, pero desde un haber-sido (pasado) y en medio de un estar-en-el-mundo presente. No son fases secuenciales sino co-originarias.   Heidegger lo describe como una distensión o estiramiento que hace que el Dasein sea finito y mortal: se extiende entre nacimiento y muerte, entre lo que ya fue y lo que aún puede ser.</p>
+<p>Heidegger describe el Dasein como &quot;arrojado&quot; al mundo: nacemos en una situación histórica, cultural y factual sin haberla elegido, como un &quot;naufragio&quot; en la existencia.</p>
+<p>Para Sartre, la libertad es absoluta y solitaria; para Heidegger, el Dasein es siempre &quot;con-otros&quot; (Mitsein) y ligado a la historicidad.</p>
+<p>HeideggerDescubre que el Dasein no es una &quot;cosa&quot; estática ni un sujeto pensante aislado (como en Descartes), sino un ser siempre ya en el mundo, involucrado, ocupado y proyectado. La Sorge es esa unidad originaria que explica todo: el Dasein es cuidado en su esencia.</p>
+<p>Heidegger revela la finitud y la muerte como posibilidad propia, llamando a la autenticidad</p>
+<p>Sartre: el pour-soi es &quot;nihilización&quot; del pasado y proyección hacia un futuro que nunca se completa, lo que explica por qué &quot;nunca&quot; somos &quot;completos&quot;.</p></div>
+</div>
+<div class="page-overlay" id="section5">
+  <div class="page-topbar">
+    <div class="page-topbar-left">
+      <button class="btn-back" onclick="closePage('section5')">← Volver a la principal</button>
+      <span class="modal-topbar-title">Heidegger y la temporalidad</span>
+    </div>
+    <button class="btn-modal-action" onclick="togglePageFullscreen('section5')" title="Pantalla completa">⤢</button>
+  </div>
+  <div class="page-content">
+    <h2>Heidegger y la temporalidad</h2>
+    <p>En estos apuntes, la conexión entre Heidegger y Sartre aparece sobre todo a través de la <strong>temporalidad</strong>. Tanto el <em>Dasein</em> como el <em>pour-soi</em> no son realidades fijas ni cerradas, sino modos de existir que se comprenden desde el tiempo, la proyección y la finitud.</p>
+
+    <div class="quote-box">Conexión con Heidegger: La temporalidad y el futuro: Tanto el Dasein como el pour-soi son esencialmente temporales.</div>
+
+    <h3>1. El Dasein como cuidado (<em>Sorge</em>)</h3>
+    <p>Heidegger ve el Dasein como <strong>"cuidado" (Sorge)</strong>, extendido entre pasado, presente y futuro. El ser humano no es una cosa estática ni un sujeto aislado, sino un ser que ya está en el mundo, implicado en tareas, relaciones, decisiones y posibilidades. La <em>Sorge</em> no es un sentimiento concreto, sino la estructura misma de la existencia humana.</p>
+
+    <div class="concept-grid">
+      <div class="concept-item"><strong>Pasado</strong><span>Haber sido arrojados a una situación que no hemos elegido del todo.</span></div>
+      <div class="concept-item"><strong>Presente</strong><span>Estar inmersos en el mundo cotidiano, entre cosas, tareas y otros.</span></div>
+      <div class="concept-item"><strong>Futuro</strong><span>Proyectarnos hacia posibilidades, metas y formas de vida aún no realizadas.</span></div>
+    </div>
+
+    <p>El Dasein se despliega a través de estas tres dimensiones de manera simultánea y unitaria: está ya arrojado en un pasado, caído en el presente cotidiano y proyectado hacia el futuro. No son fases separadas, sino momentos <strong>cooriginarios</strong> de una misma estructura existencial.</p>
+
+    <h3>2. Estructura tripartita de la <em>Sorge</em></h3>
+    <h4>Facticidad</h4>
+    <p><strong>Facticidad</strong> significa que siempre estamos ya en una situación concreta: nacemos en un cuerpo, una familia, una época, una cultura. No elegimos de entrada esas condiciones, pero debemos hacernos cargo de ellas. Los apuntes lo expresan con claridad: no elegiste nacer en el siglo XXI en España, pero ya estás ahí y tienes que vivir desde esa situación.</p>
+
+    <h4>Caída</h4>
+    <p>La <strong>caída</strong> designa nuestra absorción en el mundo cotidiano. Vivimos dispersos en lo inmediato, en el trabajo rutinario, en el ruido, en el "se hace" y "se dice" del <em>das Man</em>. El ejemplo de los apuntes es muy expresivo: pasar el día haciendo <em>scroll</em> en redes o actuando mecánicamente sin cuestionarse nada.</p>
+
+    <h4>Existenciariedad o proyección</h4>
+    <p>La <strong>existenciariedad</strong> remite a que el Dasein no es simplemente lo que ya es, sino lo que <strong>puede llegar a ser</strong>. Vivimos anticipándonos, eligiendo y proyectándonos hacia posibilidades. El ejemplo de los apuntes es estudiar para ser médico: al hacerlo, te proyectas hacia un futuro posible.</p>
+
+    <h3>3. El tiempo como forma de existir</h3>
+    <p>En Heidegger, el tiempo no es ante todo el del reloj. No es algo externo que simplemente pasa, sino la <strong>forma en que existimos</strong>. Por eso la <em>Sorge</em> une pasado, presente y futuro como dimensiones vividas: llevamos encima lo ya sido, actuamos en medio del mundo y nos abrimos a lo que todavía no somos.</p>
+
+    <div class="highlight-box"><strong>Resumen simple:</strong> la existencia humana consiste en preocuparse, ocuparse y proyectarse. Sin <em>Sorge</em> no hay Dasein; sin temporalidad no hay existencia humana.</div>
+
+    <h3>4. Arrojamiento, finitud y autenticidad</h3>
+    <p>Heidegger describe al ser humano como <strong>arrojado</strong> al mundo: nacemos en una situación histórica y factual sin haberla elegido. Pero ese arrojamiento no elimina la posibilidad de vivir de forma auténtica. Al contrario, la autenticidad surge cuando asumimos nuestra finitud y nuestra condición de <strong>ser-para-la-muerte</strong>, anticipando la muerte como posibilidad propia y haciéndonos cargo de nuestras posibilidades con resolución.</p>
+
+    <h3>5. Relación con Sartre</h3>
+    <p>Los apuntes subrayan que sin Heidegger no se entiende del todo a Sartre. El <em>pour-soi</em> sartreano hereda del <em>Dasein</em> la idea de un ser humano lanzado a la existencia, abierto al futuro y nunca concluido. La diferencia es que Sartre radicaliza el tema de la libertad: mientras en Heidegger el Dasein es siempre <em>con-otros</em> y ligado a la historicidad, en Sartre la libertad aparece de manera más absoluta, solitaria y angustiosa.</p>
+
+    <div class="thinker-card">
+      <h4>Idea final para clase</h4>
+      <p>Heidegger permite comprender que el ser humano no es una esencia fija, sino una existencia temporal, finita y proyectiva. Sartre recogerá esta herencia y la convertirá en una filosofía de la libertad radical, la responsabilidad y la angustia.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow='hidden'; }
+function closeModal(id) { document.getElementById(id).classList.remove('active'); if(!document.querySelector('.modal-overlay.active') && !document.querySelector('.page-overlay.active')) document.body.style.overflow=''; }
+function openPage(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow='hidden'; window.scrollTo({top:0,behavior:'smooth'}); }
+function closePage(id) { const el=document.getElementById(id); el.classList.remove('active'); el.classList.remove('fullscreen'); if(!document.querySelector('.modal-overlay.active') && !document.querySelector('.page-overlay.active')) document.body.style.overflow=''; }
+function toggleFullscreen(btn) { const box = btn.closest('.modal-box'); box.classList.toggle('fullscreen'); }
+function togglePageFullscreen(id) { document.getElementById(id).classList.toggle('fullscreen'); }
+function overlayClose(e, id, kind) { if(e.target.id===id){ kind==='modal' ? closeModal(id) : closePage(id); } }
+document.addEventListener('keydown', (e) => { if(e.key==='Escape'){ document.querySelectorAll('.modal-overlay.active').forEach(m => m.classList.remove('active')); document.querySelectorAll('.page-overlay.active').forEach(p => p.classList.remove('active')); document.body.style.overflow=''; } });
+const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); }); }, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
